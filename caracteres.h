@@ -1,8 +1,22 @@
 #ifndef _LETRAS_H_
 #define _LETRAS_H_
 
-#define CARACTER_ANCHO 6
-#define CARACTER_ALTO 6
+#include <stdio.h>
+#include <stdlib.h>
+
+#define CARACTER_ANCHO 2
+#define CARACTER_ALTO 2
+#define CANT_CARACTERES 41
+
+#define MAX_STRING 1000
+
+typedef struct chars_anscii
+{	char caracter;
+	const int (*vect_dir)[2];
+	 int longitud;
+}caracteres;
+
+caracteres *crear_diccionario(void);
 
 extern const int caracter_a[7][2];
 extern const int caracter_b[12][2];

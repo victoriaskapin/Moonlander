@@ -1,0 +1,41 @@
+INFORME: 
+
+dividi la realización del trabajo práctico en varias partes. 
+
+1) realizacion del terreno: "libreria_terreno" 
+
+	agrupe todas las funciones que me permitirían graficar el terreno en una librería aparte, usando la función que fue dada por la cátedra en conjunto con las funciones pedidas en el ejercicio obligatorio nro 3. 
+
+	con la matriz dinamica que devolvia finalmente la funcion crear_terreno mediante un for la grafico en la pantalla modificando su coordenada en y (asi el eje y es positivo hacia arriba ).
+
+2) rotacion y traslacion de la nave : "libreria_nave"
+
+	guardo la matriz estatica que grafica la nave y la matriz del chorro de la misma en matrices dinamicas para asi puedo ir modificandolas para su posterior graficacion 
+
+	con el cambio del angulo por interaccion del usuario voy rotando la matriz usando la funcion vector_rotar
+
+	con las funciones computar_velocidad, velocidad_x / velocidad_y  y computar_posicion puedo ir calculando las velocidades y posiciones instantaneas a medida que las voy modificando con la potencia y angulo 
+
+	a medida que se traslada en la funcion que grafica le sumo la posicion en x e y correspondientes calculadas previamente.
+
+3) aterrizaje
+
+	con la funcion vector_esta_arriba ("libreria_nave") verifico si la nave tiene contacto con el terreno.
+	en el caso de haber aterrizado devuelve un false y activa la variable 'dormir' la cual se verifica en un 'if(dormir)' donde al entrar se imprimen los mensajes de salida y vuelve a comenzar la partida con los valores iniciales, un terreno nuevo y el score y combustible modificados acorde al tipo de aterrizaje. 
+
+4) graficacion de stats y mensajes 
+
+	para graficar los stats y los mensajes de fin de partida cree cuatro funciones nuevas para hacerlo de una manera mas ordenada
+	
+	datos_en_pantalla dibuja todos los valores presentes durante la partida, que se van actualizando a medida que se modifican. 
+
+	mensajes_finde_pantalla dibuja solo el resultado del aterrizaje, y modifica el score y combustible
+
+	las matrices utilizadas para graficar las letras fueron guardadas en una estructura diccionario que contiene un tag para la letra, la matriz para su grafico y la longitud de la misma. este se encuentra en la libreria "caracteres"
+
+
+
+
+
+
+
